@@ -17,12 +17,13 @@ echo system($_GET["cmd"]);
 ``` 
 
 
-### Explore it yourself, make a PHP file to test the vulnerability locally in your system through localhost with the code mentioned above.
+### Explore it yourself :
+ make a PHP file to test the vulnerability locally in your system through localhost with the code mentioned above.
 ## Let's try a challenge
 
-### NATAS 12 :
- - #### USERNAME : natas12
- - #### PASSWORD : EDXp0pS26wLKHZy1rDBPUZk0RKfLGIR3 
+NATAS 12 :
+ - USERNAME : natas12
+ - PASSWORD : EDXp0pS26wLKHZy1rDBPUZk0RKfLGIR3 
  
  ![natas12](natas12.1.png)
 
@@ -49,7 +50,7 @@ Gives the password : jmLTY0qiPZBbaKc9341cqPQZBJv7MQbY
 </br></br>
 ![natas12](natas12.5.png)
 
-## This is a basic example of File upload vulnerability.
+ This is a basic example of File upload vulnerability.
 
 
 
