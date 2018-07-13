@@ -11,6 +11,15 @@ The other class of problem is with the file size or content. The range of proble
 
 ## Impact
 
+- The attacker can get a webshell and execute various commands,browse system files and browse local resources etc.
+- Make a phishing page in the website
+- Make a permenant XSS in the website
+- Uploaded sensitive files might be accessible by unauthorised people.
+- Uploaded files might trigger vulnerabilities in broken libraries/applications on the client side.
+- Uploaded files might trigger vulnerabilities in broken libraries/applications on the server side.
+- Uploaded files might trigger vulnerabilities in broken real-time monitoring tools.
+
+The impact of this vulnerability is high, supposed code can be executed in the server context or on the client side. The likelihood of detection for the attacker is high. The prevalence is common. As a result the severity of this type of vulnerability is high.
 ### Explore it yourself :
  make a PHP file to test the vulnerability locally in your system with the code mentioned here.
  ## shell.php
