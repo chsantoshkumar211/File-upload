@@ -1,8 +1,8 @@
 # File upload vulnerability
 
-## OWASP Description
-
 > Various web applications allow users to upload files (eg images,music files etc). The uploaded files can create momentous risk if not handled in a secure way. Depending on the how the file is processed and where it is stored the impact of the file upload vulnerability may vary.
+
+There are two types forms of  complications here.The first one is with the metadata, like the path and the file name.These are generally provided by the transport, such as HTTP multipart encoding. This data can be used to trap the application into overwriting a critical file or storing the file in a bad location. For example, the attacker can upload file called index.php in the root folder by upload a malicious file and its filename might look like this “../../../index.php”. So you must validate the metadata extremely carefully before using it.The other type of problem with uploaded data comes from file content.
 
 ## Impact
 - The attacker can get a web shell and execute various commands, browse system files and browse local resources etc.
