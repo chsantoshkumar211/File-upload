@@ -1,25 +1,19 @@
 # File upload vulnerability
 
 ## OWASP Description
-Uploaded files represent a significant risk to applications. The first step in many attacks is to get some code to the system to be attacked. Then the attack only needs to find a way to get the code executed. Using a file upload helps the attacker accomplish the first step.
 
-The consequences of unrestricted file upload can vary, including complete system takeover, an overloaded file system or database, forwarding attacks to back-end systems, client-side attacks, or simple defacement. It depends on what the application does with the uploaded file and especially where it is stored.
-
-There are really two classes of problems here. The first is with the file metadata, like the path and file name. These are generally provided by the transport, such as HTTP multi-part encoding. This data may trick the application into overwriting a critical file or storing the file in a bad location. You must validate the metadata extremely carefully before using it.
-
-The other class of problem is with the file size or content. The range of problems here depends entirely on what the file is used for. See the examples below for some ideas about how files might be misused. To protect against this type of attack, you should analyse everything your application does with files and think carefully about what processing and interpreters are involved.
+> Various web applications allow users to upload files (eg images,music files etc). The uploaded files can create momentous risk if not handled in a secure way. Depending on the how the file is processed and where it is stored the impact of the file upload vulnerability may vary.
 
 ## Impact
-
-- The attacker can get a webshell and execute various commands,browse system files and browse local resources etc.
+- The attacker can get a web shell and execute various commands, browse system files and browse local resources etc.
 - Make a phishing page in the website
-- Make a permenant XSS in the website
+- Make a permanent XSS in the website
 - Uploaded sensitive files might be accessible by unauthorised people.
 - Uploaded files might trigger vulnerabilities in broken libraries/applications on the client side.
 - Uploaded files might trigger vulnerabilities in broken libraries/applications on the server side.
 - Uploaded files might trigger vulnerabilities in broken real-time monitoring tools.
 
-The impact of this vulnerability is high, supposed code can be executed in the server context or on the client side. The likelihood of detection for the attacker is high. The prevalence is common. As a result the severity of this type of vulnerability is high.
+The impact of this vulnerability is high, a supposed code can be executed in the server context or on the client side. The likelihood of detection for the attacker is high. The prevalence is common. As a result, the severity of this type of vulnerability is high.
 ### Explore it yourself :
  Make a PHP file to test the vulnerability locally in your system with the code mentioned here.
  
