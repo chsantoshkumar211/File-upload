@@ -1,19 +1,16 @@
 # File upload vulnerability
 
-> Various web applications allow users to upload files (eg images, music files etc). The uploaded files can create momentous risk if not handled in a secure way. Depending on the how the file is processed and where it is stored the impact of the file upload vulnerability may vary.
+> Various web applications allow users to upload files (eg images, music files etc). The uploaded files can initiate momentous risk if not handled in a secure way. Depending on the how the file is processed and where it is stored the impact of the file upload vulnerability may vary.
 
-There are two types forms of complications here. The first one is with the metadata, like the path and the file name. These are generally provided by the transport, such as HTTP multipart encoding. This data can be used to trap the application into overwriting a critical file or storing the file in a bad location. For example, the attacker can upload a file called index.php in the root folder by upload a malicious file and its filename might look like this “../../../index.php”. So you must validate the metadata extremely carefully before using it. The other type of problem with uploaded data comes from file content.
+There are two types forms of complications here. The first form is due to the metadata (file name and path). This may replace important files. For example, the attacker can upload a file named index.html in the root folder by upload a malicious file and its filename might look like this "../../../index.html". So you must validate the metadata immensely carefully before you are going to use it. The other form of complication is due to the content in the file.
 
 ## Impact
-- The attacker can get a web shell and execute various commands, browse system files and browse local resources etc.
-- Make a phishing page in the website
-- Make a permanent XSS in the website
-- Uploaded sensitive files might be accessible by unauthorized people.
-- Uploaded files might trigger vulnerabilities in broken libraries/applications on the client side.
-- Uploaded files might trigger vulnerabilities in broken libraries/applications on the server side.
-- Uploaded files might trigger vulnerabilities in broken real-time monitoring tools.
+- The attacker might get a web shell.
+- Make a phishing page in the website.
+- Make a permanent XSS on the website.
+- Uploaded sensitive content might be reachable by unintended people.
 
-The impact of this vulnerability is high, a supposed code can be executed in the server context or on the client side. The likelihood of detection for the attacker is high. The prevalence is common. As a result, the severity of this type of vulnerability is high.
+The severity is very high, an intended code can be executed in the server context or on the client side. The tendency of detection for the attacker is so high. The prevalence is common. This makes the severity of this vulnerability very high.
 ### Explore it yourself :
  Make a PHP file to test the vulnerability locally in your system with the code mentioned here.
  
@@ -47,7 +44,7 @@ Let's try to find the files present in the directory where the image is uploaded
 
 ![natas12](natas12.4.png)
 
-we can see various files present in the directory on the screen (say jpg,PHP etc.) uploaded by other users for the challenge.
+we can see various files present in the directory on the screen (say jpg, PHP etc.) uploaded by other users for the challenge.
 
 The password for the next level will be in the folder /etc/natas_webpass/
 where natas12 is the file containing the password.
@@ -62,6 +59,3 @@ Gives the password: jmLTY0qiPZBbaKc9341cqPQZBJv7MQbY
 ![natas12](natas12.5.png)
 
  This is a basic example of File upload vulnerability.
-
-
-
