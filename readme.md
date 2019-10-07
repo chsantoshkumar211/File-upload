@@ -1,16 +1,16 @@
 # File upload vulnerability
 
-> Various web applications allow users to upload files (eg images, music files etc). The uploaded files can initiate momentous risk if not handled in a secure way. Depending on the how the file is processed and where it is stored the impact of the file upload vulnerability may vary.
+> Various web applications allow users to upload files (eg images, music files etc). The uploaded files can initiate momentous risk if not handled in a secure way. Depending on how the file is processed and where it is stored the impact of the file upload vulnerability may vary.
 
 There are two types forms of complications here. The first form is due to the metadata (file name and path). This may replace important files. For example, the attacker can upload a file named index.html in the root folder by upload a malicious file and its filename might look like this "../../../index.html". So you must validate the metadata immensely carefully before you are going to use it. The other form of complication is due to the content in the file.
 
 ## Impact
 - The attacker might get a web shell.
-- Make a phishing page in the website.
+- Make a phishing page on the website.
 - Make a permanent XSS on the website.
 - Uploaded sensitive content might be reachable by unintended people.
 
-The severity is very high, an intended code can be executed in the server context or on the client side. The tendency of detection for the attacker is so high. The prevalence is common. This makes the severity of this vulnerability very high.
+The severity is very high, an intended code can be executed in the server context or on the client-side. The tendency of detection for the attacker is so high. The prevalence is common. This makes the severity of this vulnerability very high.
 ### Explore it yourself :
  Make a PHP file to test the vulnerability locally in your system with the code mentioned here.
  
@@ -44,7 +44,7 @@ Let's try to find the files present in the directory where the image is uploaded
 
 ![natas12](natas12.4.png)
 
-we can see various files present in the directory on the screen (say jpg, PHP etc.) uploaded by other users for the challenge.
+we can see various files present in the directory on the screen (say jpg, PHP, etc.) uploaded by other users for the challenge.
 
 The password for the next level will be in the folder /etc/natas_webpass/
 where natas12 is the file containing the password.
